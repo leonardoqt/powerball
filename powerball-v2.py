@@ -1,5 +1,7 @@
 #!/bin/python3
 
+#xpath is /html/body/div/div[2]/div[1]/div[1]/div[3]/ul/li[3]/span
+#                                       week            ball
 
 # seems a user-friendly web crawler package
 from requests_html import HTMLSession
@@ -85,3 +87,5 @@ for num_draw in range(4):
 	print(draw_winning, draw_powerball)
 #
 print("Good Luck This Week!")
+rr = r.html.xpath('/html/body/div/div[2]/div[1]/div/div[3]/ul/li[8]/span')
+print(len(rr))
